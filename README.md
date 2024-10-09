@@ -1,10 +1,12 @@
-<p align="center"> <img src="https://github.com/Eanya-Tonic/CCTV_Viewer/blob/master/app/src/main/res/drawable/icon.png" style="width:200px;" /> </p>  <h1 align="center">电视浏览器</h1>  <p align="center">一个电视机顶盒及Android TV收看电视直播的浏览器 </p>
+<p align="center"> <img src="https://github.com/Eanya-Tonic/CCTV_Viewer/blob/master/app/src/main/res/drawable/icon.png" style="width:200px;" /> </p>  <h1 align="center">电视浏览器</h1>  <p align="center">一个电视机顶盒及Android TV收看网页视频的浏览器 </p>
 
 
 ## 下载安装包
 从Github Release下载：https://github.com/Eanya-Tonic/CCTV_Viewer/releases/latest
 <br>
 从百度网盘下载：https://pan.baidu.com/s/1e5wMCorJIp9oi5yN8mJ1KA?pwd=qozp 提取码：qozp
+<br>
+从VoidTech实验室下载（X5内核1.7.2版）：https://void-tech.cn/wp-content/uploads/2024/10/CCTV_Viewer_1.7.2-X5.zip
 
 ## 演示视频
 **B站：**
@@ -16,21 +18,27 @@
 ## 使用方法
 **电视盒子：**
 
-![Screenshot_20240127-213312](https://github.com/Eanya-Tonic/CCTV_Viewer/assets/74545593/13e1c752-15e0-40bc-9a58-4138bc93dd8f#pic_center)
+![2024-10-03_23-09-27](https://github.com/user-attachments/assets/9dbda531-1976-438a-b293-fd5b5fa002e6#pic_center)
 
 <div align=center><p>频道切换列表界面</p></div>
 
-![Screenshot_20240127-213326](https://github.com/Eanya-Tonic/CCTV_Viewer/assets/74545593/4624aa07-503d-4cbf-b274-2efa5516d63c#pic_center)
+![2024-10-03_23-09-43](https://github.com/user-attachments/assets/0771c85a-9957-4554-bb98-ebab6f49dba8#pic_center)
 
 <div align=center><p>菜单键功能菜单</p></div>
+
+![2024-10-03_23-09-51](https://github.com/user-attachments/assets/bca3b30b-7ca4-4fa3-a975-05230011ff2f#pic_center)
+
+![2024-10-03_23-09-59](https://github.com/user-attachments/assets/a9f3b5a8-5546-4e95-9eef-ba0e389fd22d#pic_center)
+
+<div align=center><p>设置界面</p></div>
 
 使用上下键切换频道，使用确认键显示当前频道和节目信息、并打开频道切换列表，单击菜单键打开功能菜单，输入数字键换到指定台，双击返回键退出程序。
 
 **其他设备：**
 
-使用键盘方向键上下控制切换频道，使用Enter键显示当前频道和节目信息、并打开频道切换列表，单击键盘M键打开功能菜单，输入数字键换到指定台。
+使用键盘方向键上下控制切换频道，使用Enter键显示当前频道和节目信息、并打开频道切换列表，单击键盘M键打开功能菜单，单击键盘B键触发返回，输入数字键换到指定台。
 
-## 目前可看频道 
+## 目前可看网页
 
 1 CCTV-1 综合
 
@@ -115,6 +123,33 @@
 41 山东卫视
 
 ## 更新日志
+
+**v1.7.2 更新日志（2024.10.06）**
+
+1.尝试修复本地X5内核安装问题，修改内核包存储目录
+
+2.修改设置中启用X5按钮的用户交互，提升使用体验
+
+3.增加一个X5安装界面，尝试安装X5内核直至安装完成（可能导致app无限重启，如出现无限app重启，清除全部数据或卸载重装app即可恢复系统WebView）
+
+4.默认关闭双缓冲加载
+
+5.降低安装限制到SDK 17
+
+6.64位设备需要46XXX版本的X5内核，但32位设备需要45XXX版本的内核，考虑到大多数需要X5内核的设备都是32位机器，故在apk集成32位X5内核，并在64位设备暂时禁用X5安装（经测试，在64位设备安装32位X5内核会导致闪退和无限重启）
+
+**v1.7.1 更新日志（2024.10.03）**
+
+1.修复应用程序版本号未更新
+
+2.允许用户设置是否按上下键时直接换台，而不是弹出换台抽屉
+
+3.允许用户设置是否在换台抽屉中按返回键时直接关闭抽屉，而不是返回上一级
+
+4.设置界面布局优化
+
+5.尝试修复低网速环境下页面无法正常加载问题
+
 **v1.7 更新日志（2024.09.22）**
 
 _体验调整_

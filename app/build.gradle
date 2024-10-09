@@ -8,17 +8,16 @@ android {
 
     defaultConfig {
         applicationId "com.eanyatonic.cctvViewer"
-        minSdk 19
-        targetSdk 32
-        versionCode 19
-        versionName "1.7.0"
-        ndk{abiFilters "armeabi", "armeabi-v7a", "x86", "mips"}
+        minSdk 17
+        targetSdk 28
+        versionCode 22
+        versionName "1.7.3"
+        ndk{abiFilters "armeabi", "armeabi-v7a", "x86"}
         multiDexEnabled true
     }
 
     buildTypes {
         release {
-            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -26,6 +25,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_15
         targetCompatibility JavaVersion.VERSION_15
+    }
+
+    lintOptions {
+        abortOnError false // 允许构建过程中出现 lint 错误
     }
 
 }
